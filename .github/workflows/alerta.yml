@@ -1,0 +1,18 @@
+name: Notificacion a Ntfy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  notificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Enviar alerta a ntfy.sh
+        run: |
+          curl -d "🚀Se ha actualizado la página web en el repo By: Elnni J. Pena." \
+          ntfy.sh/devops-itla
