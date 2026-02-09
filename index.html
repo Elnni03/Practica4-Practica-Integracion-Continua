@@ -2,10 +2,49 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Primera Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Web CI/CD</title>
+    <style>
+        /* Agregué un poco de CSS para que se vea bonito y centrado */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            transition: background 0.5s ease;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+            max-width: 300px;
+        }
+        h1 {
+            color: #333;
+            margin: 0;
+        }
+        p {
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="card">
+        <h1>¡Hola Mundo!</h1>
+        <p>Haz clic en cualquier parte para interactuar</p>
+    </div>
+
     <script>
+        // Ahora sí, el script encontrará estos elementos
         const card = document.querySelector('.card');
         const h1 = document.querySelector('h1');
         
