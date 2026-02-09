@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Primera Web</title>
+</head>
+<body>
+    <script>
+        const card = document.querySelector('.card');
+        const h1 = document.querySelector('h1');
+        
+        const frases = [
+            "¡Lo lograste!",
+            "DevOps es el futuro",
+            "Sigue programando",
+            "ITLA Power 🚀",
+            "JavaScript es genial"
+        ];
+
+        document.body.addEventListener('click', () => {
+            // Generar un color aleatorio
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.background = "#" + randomColor;
+            
+            // Cambiar el texto de la tarjeta
+            const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+            h1.innerText = fraseAleatoria;
+            
+            // Efecto visual en la tarjeta
+            card.style.transform = "scale(1.1)";
+            setTimeout(() => {
+                card.style.transform = "scale(1)";
+            }, 200);
+        });
+    </script>
+</body>
+</html>
